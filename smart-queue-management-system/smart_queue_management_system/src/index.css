@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #142B4A;
+  --color-navy-dark: #0E1E34;
+  --color-navy-light: #1E3D66;
+  --color-navy-muted: #2A4870;
+  --color-teal-brand: #14B8A6;
+  --color-teal-hover: #0D9488;
+  --color-teal-dark: #0F766E;
+  --color-teal-light: #CCFBF1;
+  --color-teal-subtle: #F0FDFA;
+  --color-app-bg: #F4F7FB;
+}
+
+@layer base {
+  body {
+    background-color: #F4F7FB;
+    color: #142B4A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom smooth pulse and glow for live public display */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(20, 184, 166, 0.7);
+    transform: scale(1.015);
+  }
+}
+
+.animate-glow {
+  animation: glow-pulse 2s infinite ease-in-out;
+}
